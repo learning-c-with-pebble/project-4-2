@@ -1,7 +1,7 @@
 #include <pebble.h>
 
-Window *window;
-TextLayer *text_layer;
+static Window *window;
+static TextLayer *text_layer;
 
 static void handle_tick(struct tm *tick_time, TimeUnits units_changed) {
     static char time_string[] = "00:00:00";
