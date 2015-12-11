@@ -4,6 +4,8 @@ static Window *window;
 static TextLayer *text_layer;
 
 static void handle_tick(struct tm *tick_time, TimeUnits units_changed) {
+    int minutes_after_the_hour = tick_time->tm_min;
+    int hour = tick_time->tm_hour;
     static char time_string[] = "00:00:00";
 
     strftime(time_string, sizeof(time_string), "%T", tick_time);
